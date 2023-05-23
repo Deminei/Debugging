@@ -1,0 +1,23 @@
+Debugging Practice!
+The initial method returned the expected result of 3.0, and so I moved on to introducing
+the null pointer and array index out of bounds exceptions.
+
+I Introduced 3 different arrays, 1 null, 1 invalid, and 1 empty.
+
+The array set to null returned NullPointerException at line 4
+(where i call the calculateAverage method on the null array of numbers),
+and at line 19
+(where my method has a for loop to check if my numbers array if fact contains integers to sum).
+
+I used the debugger to find the type of exception as well as the location, to then set the array to appropriate integers.
+
+Once the NullPointerExceptions was resolved, I received the ArrayIndexOutOfBoundsException,
+this pointed to line 8 where I specified the int value of my invalidArray to an index of 3,
+I only provided a total index value of 2.
+
+I resolved this by adding another integer to the array so the index was within range.
+
+I introduced a logic error to my calculateAverage method by having the result return sum;
+The result was incorrect as the return result was the sum of the intergers in the arrays, not the average.
+
+Also added throw IllegalArgumentException in the event of a null or empty array in my calculateAverage method.
